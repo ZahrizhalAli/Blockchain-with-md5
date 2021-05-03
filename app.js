@@ -15,6 +15,6 @@ app.get("/", function(req,res){
   res.render("index");
 })
 
-app.listen(3000, function(req,res){
+app.listen(process.env.PORT || 3000, function(req,res){
   console.log("RUNS ON PORT 3000")
 })

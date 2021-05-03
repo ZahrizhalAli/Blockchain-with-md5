@@ -1,0 +1,27 @@
+body,
+html {
+  height: 100vh;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background-color: #1b262c;
+  color: white;
+}
+
+.main-container {
+  display:flex;
+  justify-content:center;
+
+}
+.background{
+  position:relative;
+  z-index: 0;
+  background: cover;
+}
+
+.title-container{
+  margin: 100px auto;
+  position:absolute;
+  z-index:1;
+
+}

@@ -18,9 +18,15 @@ let store = [md5(text)]
 
 
 app.get("/", function(req,res){
+
   res.render("index", {textList: textList, hashList:store});
 })
 
+app.post("/delete", function(req,res){
+  textList=[text];
+  store=[md5(text)];
+  res.redirect("/");
+})
 app.post("/", function(req,res){
   let newText = req.body.text;
   textList.push(newText);

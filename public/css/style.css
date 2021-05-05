@@ -26,6 +26,10 @@ html {
 
 }
 
+.btn {
+  margin: 10px;
+}
+
 .card {
   color: black;
   margin: 20px 0;

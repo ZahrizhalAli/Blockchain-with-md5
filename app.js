@@ -11,8 +11,21 @@ app.use(bodyParser.urlencoded({
   extended:true
 }));
 
+let text = "Genesis Block";
+
+let textList = [text];
+let store = [md5(text)]
+
+
 app.get("/", function(req,res){
-  res.render("index");
+  res.render("index", {textList: textList, hashList:store});
+})
+
+app.post("/", function(req,res){
+  let newText = req.body.text;
+  textList.push(newText);
+  store.push(md5(textList));
+  res.redirect('/');
 })
 
 app.listen(process.env.PORT || 3000, function(req,res){

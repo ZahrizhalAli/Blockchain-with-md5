@@ -20,13 +20,34 @@
           <main class="px-3">
       <h1>Blockchain with md5</h1>
       <p class="lead">To make it simple, Simple explanation for hashing is something that would make our data safe by encrypting (hashing) it to fixed length jumbled text inside a block that connected to eachother, thus it is called chain.</p>
-      <p class="lead">
-        <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Learn more</a>
-      </p>
+      <form method="post" action="/">
+
+      <div class="mb-3">
+
+    <label for="exampleFormControlInput1" class="form-label">Text</label>
+    <input type="text" name="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter text">
+    </div>
+    <button class="btn btn-light">GENERATE</button>
+  </form>
+    <hr/>
+    <% for(let i = 0 ; i < hashList.length ;i++){%>
+    <div class="card">
+      <div class="card-body">
+        <h5>Index : <%=i%></h5>
+        <p> Text: <%= textList[i] %> </p>
+        <p>Previous Hash: <%= hashList[i-1]%> </p>
+        <h6>Hash: <span class="text-secondary"><%=hashList[i]%></span></h6>
+      </div>
+
+    </div>
+    <%}%>
+
     </main>
         </div>
 
+
       </div>
+
       <canvas class="background">  </canvas>
 
 

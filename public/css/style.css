@@ -25,3 +25,8 @@ html {
   z-index:1;
 
 }
+
+.card {
+  color: black;
+  margin: 20px 0;
+}
